@@ -1,11 +1,11 @@
 <?php 
-$textValue = $_POST['textValue'];
+$testoValue = $_POST['textValue'];
 $parolaValue = $_POST['wordValue'];
-$parolaCensurale = str_replace('$parolaValue','***','$parolaValue');
-
-$lunghezzaTesto = strlen($textValue);
-$lungezzaParolaCensurale= strlen($parolaValue);
+$testoCensurale = str_replace($parolaValue , '***', $testoValue);
+$lunghezzaTesto = strlen($testoValue);
+$lungezzaParolaCensurale = strlen($testoCensurale);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +17,8 @@ $lungezzaParolaCensurale= strlen($parolaValue);
 <body>
     <div class="wrapper">
         <div class="container mt-4">
-            <p><?php echo $textValue.'Lunghezza testo:'.$lunghezzaTesto ?></p>
-           <p><?php echo $textValue.' '.'Lunghezza parola censurale:'. $lungezzaParolaCensurale.' ' .$parolaCensurale ?></p>
-            
+            <p><?php echo $testoValue.'Lunghezza testo:'.$lunghezzaTesto?></p>
+           <p><?php echo $testoCensurale.'Lunghezza testo censurale:'.$lungezzaParolaCensurale?></p>
         </div>
     </div>
 </body>
